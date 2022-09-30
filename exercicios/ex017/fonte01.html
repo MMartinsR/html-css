@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex017 - Família de Fontes com CSS</title>
+    <style>
+        body {
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<!-- Ex017 - Família de Fontes com CSS
+    Caso a fonte seja composta de duas palavras ou mais, é necessário colocar o nome dentro de aspas.
+
+    Existe um sitema de safe font combination, que pretende garantir que alguma das fontes será possivel utilizar.
+    https://www.w3schools.com/cssref/css_websafe_fonts.asp
+
+    Caso queira algo mais generico, pode apenas dizer que quer uma fonte sem serifa ou com serifa:
+    font-family: sans-serif;
+
+    Tamanho de fontes
+    - Medidas Absolutas
+        cm, mm, in (polegada), px, pt, pc (paica)
+
+    - Medidas Relativas
+        em (relativo a altura M de uma fonte - da letra M da fonte(relativo ao tamanho natural da fonte que costuma ser de 16px)),
+        ex (relativo a altura x de uma fonte - da letra x da fonte),
+        rem (relativo a altura root - fonte que está configurada no body),
+        vw (relativo a largura da viewport - sua tela, medido em %),
+        vh (relativo a altura da viewport - sua tela, medido em %)
+        %.
+
+    Segundo a W3C, o recomendado é o px e o em.
+
+    16px é o padrão
+    E 16px geralmente é = a 1em
+
+    Peso, Estilo e Shorthand font
+    font-weight: permite configurar o peso de sua fonte, quanto maior, mas grossa.
+    valores:
+    /* lighter normal bold bolder */
+    /* 100 - 900 */
+
+    font-style: permite configurar o estilo da fonte.
+    valores:
+    /* italic normal */
+
+    text-decoration: permite configurar uma decoração como o sublinhado.
+    valores:
+    /* underline overline */
+
+    SHORTHAND
+    Vamos condensar as quatro configurações básicas de fonte:
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bolder;
+        font-size: 3em;
+        font-style: italic;
+
+    em apenas uma propriedade shorthand font nessa ordem:
+    - font-style -> font-weight -> font-size -> font-family
+
+    font: italic bolder 3em 'Work Sans', sans-serif;
+
+    Podemos ainda não aplicar um dos fonts, e colocar apenas os que desejamos, mas tem que seguir a ordem:
+
+    font: bold 2em 'Work Sans';
+-->
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti porro, magni rem rerum, aliquam laboriosam tempora necessitatibus deleniti expedita quidem architecto minima pariatur inventore sint dolor dolores voluptas incidunt nostrum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, hic ad. Minima, in. Adipisci non qui possimus sint laudantium corrupti ipsam eligendi, odio iste, perferendis accusamus nobis pariatur eum cumque.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum alias totam laborum, ab quas minima iste. Adipisci laborum quae sapiente exercitationem, ullam eligendi porro! Deserunt laborum numquam minima iste doloremque.</p>
+
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam soluta praesentium animi accusamus dolor consequuntur, nam obcaecati, atque eius itaque dicta repellendus tenetur voluptatibus sint alias placeat. Repudiandae, amet molestias!</p>
+        
+</body>
+</html>

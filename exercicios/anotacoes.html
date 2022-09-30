@@ -1,0 +1,568 @@
+<!-- ex 001 - Inicio
+    h1 - Heading, título. existem de h1 a h6
+    hr - Linha horizontal. Cria um dividor no browser
+-->
+
+<!-- ex002 - Paragrafos e Símbolos
+    p e /p - tag de paragrafos
+    br - tag de quebra de linha
+        
+    misc simbols
+    &lt - less than
+    &gt - greater than
+    &reg; - símbolo de marca registrada
+    &copy; - símbolo de copyright
+    &trade; - símbolo de trademark
+    &euro;
+    &pound;
+    &yen;
+    &cent; - símbolos de moeda
+    &delta;
+    &Delta; - símbolo de delta
+    &uparrow;
+    &uarr; - símbolo de flecha
+        
+    emojis
+    &#x1F596; - emoji vulcan salute
+    &#x1F913; - emoji nerd face
+
+    https://emojipedia.org/
+-->
+
+<!-- ex003 - Teste com Imagens
+    img - usamos a tag img para carregar imagens, através do parâmetros src.
+    Podemos usar até links externos.
+-->
+
+<!-- ex004 - Favicon
+    Favicon é o icone do site no navegador
+    <link rel="shortcut icon" href="icon-site.ico" type="image/x-icon">
+-->
+
+<!-- ex006 - Hierarquia de Títulos
+    H1 a H6 - Os titulos em HTML seguem uma hierarquia, onde o H1 seria
+    o de hierarquia mais alta, ou seja, o assunto principal do seu site e os outros seriam sub-assuntos. Sendo h2 sub-assunto de h1, h3 sub-assunto de h2 e assim por diante.
+-->
+
+<!-- ex007 - Semântica em HTML5
+    Alguns tags do html4 foram descontinuadas, por agora o HTML5 é mais focado na semântica(significado) da página do que em sua forma:
+        bgcolor
+        center
+        u
+        marquee
+        Este site possui as tags que estão depreciadas:
+        dev.w3.org/html5/pf-summary/obsolete.html
+
+        
+    Address - é a tag que permite destacar um endereço
+-->
+
+<!-- ex008 - Formatação de Textos
+    Existem duas formas de criar negrito em HTML5, a forma semântica e forma não semântica.
+    Não semântica - tag b /b
+    Semântica - tag strong /strong
+
+    Existem duas formas de criar itálico em HTML5, a forma semântica e forma não semântica.
+    Não semântica - tag i /i
+    Semântica - tag em /em
+
+    Para criar uma marcação no texto temos a teg mark /mark
+    Podemos ainda aplicar estilo as tags diretamente através do parâmetro style do css ou criar uma tag <style> dentro da tag <head> do seu documento e usar um seletor para o mark que quer alterar, que vai alterar todos.
+
+    Podemos criar um texto em letras maiores com a tag big /big (está obsoleta)
+    Podemos criar um texto em minusculo com a tag small /small
+
+    Podemos criar um texto deletado usando a tag del e /del
+    Podemos criar um texto inserido usando a tag ins e /ins
+    Podemos ainda criar um texto sublinhado com a tag U (não-semântica)
+
+    Podemos criar um texto sobrescrito usando a tag sup e /sup
+    Podemos criar um texto subscrito usando a tag sub e /sub
+
+    ctrl shift p - permite encapsular um texto em tag + wrap with abbreviation + tag name + enter
+-->
+
+<!-- ex008b - Citações e Códigos: outras formatações
+    code / code serve para envelopar um comando de código-fonte, deixando o comando em si mais claro, usando uma fonte monoespaçada. Porém ele não identa o seu código.
+
+    Para formatar esse código, usamos a tag pre e /pre
+
+    Para tirar espaços a mais, podemos usar SHIFT + TAB
+
+    q e /q é a tag que serve para fazer uma citação "citado"
+
+    blockquote e /blockquote serve para fazer uma citação em bloco, ela aparece de forma diferente do quote normal e é possivel colocar um parâmetro chamado cite onde pode colocar a referência para o livro do qual está sendo retirada aquela citação. Este parâmetro tem sentido para os mecanismos de busca, para dar direitos a quem criou o livro.
+
+    abbr e /abbr é a tag que permite colocar o significado de uma sigla
+-->
+
+<!-- ex009 - Listas OL, UL e DL
+    ol e /ol são as tags que abrem a sua ordered list
+    li e /li são as tags que criam os itens da sua lista (/li é opcional)
+    Podemos formatar o indice da lista através do parâmetro: type na tag ol e também seu inicio com o parâmetro start.
+    type: 1 A a I i 
+
+    ul e /ul são as tags que abrem sua unordered list
+    type: disc circle square
+
+    São usados para criar um dicionário por exemplo
+    dl e /dl são as tags que abrem sua definition list
+    dt e /dt são as tags que abrem sua definition term (termo)
+    dd e /dd são as tags que abrem sua definition description (descrição do termo)
+-->
+
+<!-- ex010 - Links e Âncoras em HTML5
+    Link externo é usado para apontar para outro site.
+    Usamos a tag a e /a para fazer uma âncora a este outro site, por exemplo. Dentro da âncora temos o parâmetro href (referência hipertexto) onde podemos inserir o caminho do link externo.
+
+    !!É recomendado usar o parâmetro target com o valor _blank quando se utiliza links externos para que o site externo não sobreponha o seu site. O valor _blank irá abrir o site externo em outra aba.!!
+
+    O parâmetro rel (relativo a) com o valor external é usado para sinalizar que é um link externo.
+
+    Quando usamos um link interno, não precisamos colocar um caminho inteiro, apenas o nome do arquivo se estiver na mesma pasta ou o caminho da pasta até o arquivo se estiver em outra pasta.
+
+    Outros valores para rel são: next (próxima página) e prev (página anterior) e nofollow (quando não se tem certeza se o site do link é totalmente fidedigno ou não se é real)
+
+    Target _self obriga a abrir na própria página, é o comportamento padrão de redirecionamento
+
+    Para redirecionar para uma página que não está na mesma pasta, temos que colocar o nome da pasta e o nome do arquivo.
+
+    Para redirecionar para uma página que fica em uma pasta anterior a que se está no momento, devemos usar o ../ antes do nome da pasta/arquivo para que o html saiba que está VOLTANDO pastas.
+
+    Para fazer download de arquivos, usamos as âncoras e em seu parâmetro href colocamos o valor de onde está o arquivo (caminho). Mas para efetivamente baixar quando clicar na âncora, devemos colocar o parâmetro download e em seu valor, o nome do arquivo que deverá ser baixado. Além disso, devemos colocar o parametro type com o valor application/pdf
+
+    Para encontrar os tipos de media types:
+    https://www.iana.org/assignments/media-types/media-types.xhtml
+--> 
+
+<!-- ex011 - Mídias em HTML5 (imagem e som)
+
+    Imagem dinâmica
+    A tag picture e /picture permite inserir mais do que uma imagem, e será responsável por definir qual imagem de fato estará aparecendo. (imagens dinâmicas)
+    Para definir qual imagem irá aparecer, usaremos a tag source media type dentro de picture, definindo o parâmetro media como max-width
+    Para definir mais do que um source, para inserir outra imagem deve ser acima do criado anteriormente.
+
+    Para baixar imagens e vídeos sem direito autoral:
+    https://www.pexels.com/pt-br/
+
+    Áudio
+    Caso precise de um áudio, pode baixar do youtube na biblioteca de audio que fica em seu youtube studio. Basta escolher alguma que tenha uso livre.
+
+    Usamos a tag audio e /audio para reproduzir áudios. No parâmetro src, colocamos o caminho do arquivo. Para que o audio seja reproduzido colocamos o parâmetro autoplay e o parâmetro controls.
+
+    Para que o seu site seja compativel com todos os navegadores, terá que ter vários formatos de arquivo de aúdio que sejam compativeis com cada um dos navegadores. Como mp3, wav, ogg etc.
+
+    O parâmetro preload serve para definir em que momento será carregado seu audio, auto (sempre que a página for carregada), metadata (inicialmente será carregado apenas alguns dados como, nome, tamanho, apenas quando clicar em play será de fato baixado o conteúdo) e none (nada será carregado do audio, apenas quando for clicado em play o download será feito).
+
+    Existe ainda outra maneira de inserir áudio ao seu navegador, com o audio mesmo, de forma diferente, através da tag source com parâmetro src.
+
+    Existem vários media types para o audio também, como audio/mpeg, audio/ogg etc, audio/wav etc.
+-->
+
+<!-- ex012 - Vídeos em HTML
+    Vídeo
+    Os formatos mais aceitos são: mp4, m4v, webm e ogv(= ogg)
+
+    Um ótimo software de conversão de formatos de vídeo é o handbrake.
+
+    Para inserir vídeos hospedados localmente usamos:
+    video e /video usando o parâmetro src, com o valor do caminho do vídeo. 
+    Para diminuir o tamanho em que o vídeo aparece, usamos o parâmetro width.
+    Para poder ativar o vídeo a ser reproduzido, usamos o parâmetro controls.
+
+    Da mesma forma como o áudio existe outra forma de colocar os vídeos através da tag audio e da tag source
+
+    Podemos ainda colocar um poster como um thumbnail
+
+    Para inserir vídeos hospedados externamente usamos:
+-->
+
+<!-- Ex013 - Trabalhando com Estilos CSS inline
+    As CSS Inline são aplicadas a própria tag, usando o parâmetro style.
+
+    background-color: muda a cor de fundo do documento
+    color: muda a cor da fonte
+    font-family: muda a fonte usada no documento
+    text-align: muda o alinhamento do texto
+    font-size: muda o tamanho da fonte
+    0.7em? significa que vai ficar 0.7 do tamanho relativo ao base da fonte (que nesse caso é 20)
+
+    px - pixels
+    pt - pontos
+    em - em relação ao tamanho de fonte base.
+
+    Usando essa forma de estilizar, polui o seu HTML, juntando estilo a estrutura num mesmo lugar.
+-->
+
+<!-- Ex014 - Trabalhando com Estilos CSS Locais ou Internos
+    As CSS Internas são aplicadas dentro da tag style que fica dentro da tag head do documento HTML5, através dos seletores.
+
+    Diferente da aplicação inline, quando criamos um seletor de uma tag e colocamos dentro, declarações (como é chamado o conjunto chave e valor), esse estilo será aplicado a TODOS os elementos do documento que sejam daquele seletor.
+-->
+
+<!-- Ex015 - Trabalhando com Estilos CSS Externos
+    As CSS Externas são aplicadas em seu documento, através da inserção do arquivo de estilo usando um link externo (tag link) dentro da tag head do seu documento HTML5
+
+    Diferente das anteriores, este método permite replicar o estilo por várias páginas de forma fácil e rápida.
+
+    É possível ainda, misturar as técnicas de aplicação das css e os estilos serão mesclados. Onde a precedência maior, será do inline, devido a ser mais pontual, depois o interno e depois o externo.
+
+    PARA CRIAR UM NOVO ARQUIVO NO VCODE DE MESMO NOME DE ALGUM CÓDIGO LINK USAMOS:
+    CTRL + clique em cima do nome do arquivo que quer criar no link
+
+    text-decoration: permite adicionar decorações ao texto como sublinhado, riscado, etc.
+-->
+
+<!-- Ex-16 - Representando Cores com CSS3
+    https://color.adobe.com/pt/create/color-wheel
+    http://paletton.com/#uid=74J2g0khDdX35o082hTvWamRm9W
+    https://coolors.co/caffb9-0d5c63-44a1a0-aef78e-247b7b
+
+    cor01
+    Representação por nomes: blue
+    
+    Representação por códigos hexadecimais: #0000ff (blue)
+    Decimal: 0 1 2 3 4 5 6 7 8 9
+    Hexadecimal: 0 1 2 3 4 5 6 7 8 9 A B C D E F
+
+    Representação por código rgb que usa o padrão 0 a 255 para cada uma das cores - rgb
+
+    Representação por matiz(0 a 255), saturação(0% a 100%) e luminosidade(0% a 100%) - hsl.
+
+    Temos ainda as versões do rgba e do hsl com transparência - rgba e hsla - onde esta transparência (ou alfa) vai de 0 a 1
+
+    HARMONIA DE CORES
+    Cores Primárias
+    Amarelo, Vermelho e Azul
+    Cores Secundárias
+    Laranja, Violeta e Verde
+    Cores Terciárias
+    Mistura das outras, mistura de primária com secundária (começando sempre da primária)
+    Amarelo-esverdeado, Amarelo-alaranjado, Vermelho-alaranjado, Vermelho-arroxeado, Azul-arroxeado, Azul-esverdeado (tons pastéis)
+
+    Cores Complementares (que tem mais contraste entre si)
+    violeta e amarelo
+    vermelho e verde
+    azul e laranja
+
+    Cores Análogas (irmãs, próximas, mais harmonicas)
+    Violeta - Azul-arroxeado e Vermelho-arroxeado
+
+    Cores Análogas e Complementares
+    Violeta - Azul-arroxeado e Vermelho-arroxeado e amarelo
+    Laranja - Amarelo-alaranjado e Vermelho-alaranjado e azul
+
+    Cores Análogas Relacionadas
+    Amarelo e Amarelo-alaranjado e Vermelho-alaranjado ou Amarelo-esverdeado
+
+    Cores Intercaladas
+    Amarelo e Laranja e Vermelho
+    Verde e Amarelo-esverdeado e Azul-arroxeado
+
+    Cores Triádicas
+    Amarelo e Vermelho e Azul
+
+    Cores em Quadrado´
+    Amarelo e Vermelho-alaranjado e Violeta e Azul-esverdeado.
+
+    Cores Tetrádicas
+    Verde - Vermelho e Laranja - Azul
+
+    Monocromia (uma cor, e muda saturação e luminosidade)
+    Laranja - laranja mais escuro - marrom - marrom escuro
+
+    cor02
+    - background-image: serve para fazer degrade de cores.
+        linear-gradient() - função interna do background-image que faz um degradê linear.
+        ::Onde precisamos colocar a direção do degradê (to right, to left, to top ou to bottom) ou em graus (90deg, 45deg, etc).
+        ::Em seguida as cores separadas por vírgula.
+        ::Podemos ainda depois de cada cor, colocar quanto em porcentagem da cor você deseja
+
+        radial-gradient() - função interna do background-image que faz um degradê radial.
+        ::Onde em vez do ângulo, colocamos circle
+    - background-attachment: permite definir como o fundo estará, se fixo ou móvel
+
+    Podemos criar um seletor global, através do * {}, para fazer uma configuração global das CSSs
+
+    - height: define a altura da área de conteúdo.
+
+    cor03
+    Tag main e /main contém o assunto principal do seu site, como se fosse uma div, só que com propósito específico.
+
+    style.css
+
+ 
+    width: largura do container.
+    padding: largura interior do objeto.
+    margin: largura exterior do objeto, auto ele centraliza independente do tamanho da tela.
+    border-radius: permite suavizar a borda do container.
+    box-shadow: permite aplicar sombra ao elemento
+        - param 1 sombra para lateral esq -10px dir 10px
+        - param 2 sombra para baixo cima -10px baixo 10px
+        - param 3 espalhamento px
+        - param 4 cor/transparência
+    
+    text-align: alinhamento do texto.
+    text-shadow: mesmo conceito do box-shadow.
+-->
+
+<!-- Ex017 - Família de Fontes com CSS
+    Caso a fonte seja composta de duas palavras ou mais, é necessário colocar o nome dentro de aspas.
+
+    Existe um sitema de safe font combination, que pretende garantir que alguma das fontes será possivel utilizar.
+    https://www.w3schools.com/cssref/css_websafe_fonts.asp
+
+    Caso queira algo mais generico, pode apenas dizer que quer uma fonte sem serifa ou com serifa:
+    font-family: sans-serif;
+
+    Tamanho de fontes
+    - Medidas Absolutas
+        cm, mm, in (polegada), px, pt, pc (paica)
+
+    - Medidas Relativas
+        em (relativo a altura M de uma fonte - da letra M da fonte(relativo ao tamanho natural da fonte que costuma ser de 16px)),
+        ex (relativo a altura x de uma fonte - da letra x da fonte),
+        rem (relativo a altura root - fonte que está configurada no body),
+        vw (relativo a largura da viewport - sua tela, medido em %),
+        vh (relativo a altura da viewport - sua tela, medido em %)
+        %.
+
+    Segundo a W3C, o recomendado é o px e o em.
+
+    16px é o padrão
+    E 16px geralmente é = a 1em
+
+    Peso, Estilo e Shorthand font
+    font-weight: permite configurar o peso de sua fonte, quanto maior, mas grossa.
+    valores:
+    /* lighter normal bold bolder */
+    /* 100 - 900 */
+
+    font-style: permite configurar o estilo da fonte.
+    valores:
+    /* italic normal */
+
+    text-decoration: permite configurar uma decoração como o sublinhado.
+    valores:
+    /* underline overline */
+
+    SHORTHAND
+    Vamos condensar as quatro configurações básicas de fonte:
+        font-family: 'Work Sans', sans-serif;
+        font-weight: bolder;
+        font-size: 3em;
+        font-style: italic;
+
+    em apenas uma propriedade shorthand font nessa ordem:
+    - font-style -> font-weight -> font-size -> font-family
+
+    font: italic bolder 3em 'Work Sans', sans-serif;
+
+    Podemos ainda não aplicar um dos fonts, e colocar apenas os que desejamos, mas tem que seguir a ordem:
+
+    font: bold 2em 'Work Sans';
+
+    O que vale é o ultimo a ser configurado, o seletor mais especifico.
+
+    text-indent: serve para gerar um recuo no parágrafo. medido em pixels
+-->
+
+<!-- Ex018 - Usando Google Fonts
+
+    https://fonts.google.com/
+
+    As regras adicionadas ao CSS tem que estar na parte de cima da folha de estilo e fora de um seletor.
+
+    Devemos aplicar 3 ou 4 familias de fonte no máximo em um site.
+
+    Para adicionar fontes externas baixadas ao seu documento, devemos usar a regra do css font-face.
+    https://www.dafont.com/pt/love-larry.font
+
+    Tipos de format()
+    - opentype (otf)
+    - truetype (ttf)
+    - embedded-opentype
+    - truetype-aat (Apple Advanced Typography)
+    - svg    
+-->
+
+<!-- Ex019 - Seletores Personalizados
+    De forma a personalizar estilos de elementos iguais, damos a esses elementos que queremos modificar um identificador, um parâmetro id.
+
+    Tag span e /span usado para aplicar estilos ou coisas assim a um trecho.
+
+    style.css
+    Nas css quando usamos no seletor um id, temos que precede-lo de #.
+    em HTML é id = em CSS é #
+
+    Nas css quando usamos no seletor um class, temos que precede-lo de .
+    em HTML é class = em CSS é .
+
+    Apenas um elemento tem um id unico, não podemos reutilizar o id de um elemento. Para reutilizar uma estilização precisamos fazer uma class nesse e em todos os elementos que devem manter aquele estilo especifico.
+
+    Podemos aplicar mais do que uma classe a um determinado elemento apenas separando por espaço. E ainda aplicar classes a elementos que já tinham id. Sendo que as configurações de id sobrepoem as de classe, então temos que ter cuidado para as estilizações serem complementares e não sobreponentes.
+
+    Hierarquia:
+    id - maior precedência
+    class - media
+    generico - menor precedência.
+-->
+
+<!-- Ex020 - Pseudo-classes e pseudo-elementos, Links
+    shorthand border: largura estilo e cor
+    display: permite colocar os containers em disposições específicas
+        - block - esse elemento vira um bloco
+        - inline-block - um bloco em linha
+        - flex 
+        - inline-flex
+        - none (não mostrar) etc.
+
+    #   = id
+    .   = class
+    :   = pseudo-classe
+    ::  = pseudoelemento
+    >   = children
+
+    As pseudo-classes tem que estar relacionadas a um elemento ou a uma classe. São relacionadas ao estado de um determinado elemento.
+
+    A pseudo-classe :hover significa que quando passamos o mouse for cima ela terá outro comportamento.
+
+    hover.html
+    No exemplo elemento > elemento, isto significa que o elemento a direita do > é um elemento que está dentro do da esquerda ou seja, o elemento da direita é FILHO do elemento da esquerda. div(pai) > p(filho) um dentro do outro.
+
+    links.html
+    text-decoration: decorações que podemos aplicar a elementos.
+
+    :visited - pseudo-classe que podemos aplicar se algo foi visitado.
+    :active - pseudo-classe que ativa quando clicamos no elemento.
+    
+    Os pseudo-elementos podem ser aplicados a elementos a ids e a classes, pois mexem no conteúdo de determinado elemento.
+
+    ::after - usado quando queremos indicar alguma coisa depois de um elemento
+    ::before - usado quando queremos indicar alguma coisa antes de um elemento
+    https://erikasarti.com/html/dingbats-simbolos-desenhos/
+-->
+
+<!-- Ex021 - Modelo de Caixas
+    O modelo de caixa é um paradigma que indica que tudo dentro da HTML é exibido dentro de caixas e uma caixa pode estar dentro da outra.
+
+    box do conteúdo do elemento
+    border
+    padding (espaço interno)
+    margin (espaço externo)
+    outline
+
+    Temos dois níveis de caixa
+    box-level - sempre se inicia em uma linha nova e ocupa o espaço total da tela em largura (width, 100% viewport), quebra linha.
+        - <div>
+        - <h1> a <h6>
+        - <p>
+        - <main>
+        - <header>
+        - <nav>
+        - <article>
+        - <aside>
+        - <footer>
+        - <footer>
+        - <video>
+
+    inline-level - se inicia na mesma linha, caso ela não tenha sido toda ocupada por outro elemento, cria a caixa apenas do tamanho do conteúdo, não quebra linha.
+        - <span>
+        - <a>
+        - <code>
+        - <small>
+        - <strong>
+        - <em>
+        - <sup>-<sub>
+        - <label>
+        - <button>
+        - <input>
+        - <select>
+
+    margin: auto centraliza horizontalmente o seu elemento.
+
+    Shorthand - propriedade de multiplos valores
+    /* Shorthand border: width style color */
+    /* Shorthand padding: top right bottom left ou sendo os valores iguais, informe 1 só */
+            /* padding: 10px 10px 10px 10px; */
+            /* padding: 10px; */
+            /* ou apenas 2: top right, o que iguala em 10 o bottom e em 20 o left */
+    
+    /* Shorthand margin: top right bottom left */
+        /* Podemos ainda usar o auto para centralizar na direita e esquerda */
+    /* Shorthand outline: width style color */
+
+    Podemos ainda transformar elementos que por padrão são box-level ou inline-level para inline-level e box-level respectivamente usando:
+    display: inline; em um elemento box-level e
+    display: block; em um elemento inline-level.
+    
+    Temos ainda o display: inline-block que mescla as caracteristicas dos dois.
+    
+    caixa02.html
+    Tags semânticas
+    - header
+    - main
+    - footer
+    - nav
+    - section
+    - article
+    - aside
+
+    box-shadow: desloc_horizontal desloc_vertical embaçamento espalhamento cor_sombra
+    border-radius: suaviza os cantos do elemento.
+
+    caixa03.html
+    Para colocar uma borda personalizada usamos:
+    border-image-source: url('nome_arquivo.png')
+    border-image-slice: valor;
+    border-image-repeat: repeat; ou strech
+
+    Temos ainda um shorthand
+-->
+
+<!-- Desafio 10 - Android
+    Variáveis em CSS
+
+    --Nome_variavel - toda variavel começa com -- antes de seu nome
+
+    :root - pseudo-classe, raíz do nosso documento, usado para configurações mais gerais da folha.
+
+    configurações de tamanho de tela:
+    min-width: px permite configurar o tamanho minimo para responsividade
+    max-width: px permite configurar o tamanho máximo para responsividade, então cria-se uma transição e a tela não quebra
+
+    width: 100% numa imagem cria um efeito de caso se diminua a tela, a imagem tende a diminuir junto, reduzindo seu tamanho para seguir o tamanho da tela.
+
+    junto com configurações de picture e source nas imagens com max-width e mais de uma imagem conseguimos fazer uma transição melhor.
+
+    transition-duration: 1s; permite configurar a transição da alteração de configuração padrao para uma configuração de uma pseudo-classe, como o hover.
+
+    line-height: 1em - configura a distância entre as linhas.
+
+    list-style-position: inside - permite configurar a posição dos demarcadores da lista, o padrão é outsite, ou seja, fica para fora do container, estamos trocando para ficar para dentro.
+
+    columns: 2 - aplicamos a lista (ul) duas colunas, ou seja, ela será dividida em duas colunas.
+
+    list-style-type: '\2714\00A0\00A0'; - permite mudar o demarcador, usando um código de emoji (a barra invertida é necessária para o navegador encarar como comando)
+    \00A0 - nbsp espaço sem quebra de linha
+
+    **Esses comandos não são compatíveis com todos os navegadores.**
+
+    // Gambiarra para o vídeo ficar centralizado.
+    div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+-->
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex012 - Vídeos em HTML5</title>
+</head>
+<!-- ex012 - Vídeos em HTML
+    Vídeo
+    Os formatos mais aceitos são: mp4, m4v, webm e ogv(= ogg)
+
+    Um ótimo software de conversão de formatos de vídeo é o handbrake.
+
+    Para inserir vídeos hospedados localmente usamos:
+    video e /video usando o parâmetro src, com o valor do caminho do vídeo. 
+    Para diminuir o tamanho em que o vídeo aparece, usamos o parâmetro width.
+    Para poder ativar o vídeo a ser reproduzido, usamos o parâmetro controls.
+
+    Da mesma forma como o áudio existe outra forma de colocar os vídeos através da tag audio e da tag source
+
+    Podemos ainda colocar um poster como um thumbnail
+
+    Para inserir vídeos hospedados externamente usamos:
+-->
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+<!-- forma 1 
+    <video src="midia/cavalos.mp4" width="500" controls></video>
+    <video src="midia/cavalos-720.m4v" width="500" controls></video>
+    <video src="midia/cavalos-720.webm" width="500" controls></video>
+-->    
+    <video width="360" poster="imagens/limoes-capa.png" controls loop>
+        <source src="midia/cavalos-720.m4v" type="video/m4v">
+        <source src="midia/cavalos-720.webm" type="video/webm">
+        <source src="midia/cavalos.mp4" type="video/mp4">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+
+    <h1>Inserindo vídeos do YouTube</h1>
+    <p>Este vídeo está hospedado no YouTube</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yLOUahp-RIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

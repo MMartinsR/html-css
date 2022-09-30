@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex019 - Seletores Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Ex019 - Seletores Personalizados
+    De forma a personalizar estilos de elementos iguais, damos a esses elementos que queremos modificar um identificador, um parâmetro id.
+
+    Tag span e /span usado para aplicar estilos ou coisas assim a um trecho.
+
+    style.css
+    Nas css quando usamos no seletor um id, temos que precede-lo de #.
+    em HTML é id = em CSS é #
+
+    Nas css quando usamos no seletor um class, temos que precede-lo de .
+    em HTML é class = em CSS é .
+
+    Apenas um elemento tem um id unico, não podemos reutilizar o id de um elemento. Para reutilizar uma estilização precisamos fazer uma class nesse e em todos os elementos que devem manter aquele estilo especifico.
+
+    Podemos aplicar mais do que uma classe a um determinado elemento apenas separando por espaço. E ainda aplicar classes a elementos que já tinham id. Sendo que as configurações de id sobrepoem as de classe, então temos que ter cuidado para as estilizações serem complementares e não sobreponentes.
+
+    Hierarquia:
+    id - maior precedência
+    class - media
+    generico - menor precedência.
+-->
+<body>    
+    <h1 id="principal" class="destaque">Criando Sites em HTML e CSS</h1>
+    <h1>Aprendendo HTML</h1>
+    <h2 class="basico">HTML básico</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ratione autem <span class="basico">corporis amet</span> ea nulla voluptas? Ea fugit sed, assumenda expedita quasi dolor commodi exercitationem neque repellat enim temporibus magni!</p>   
+    <h2 class="intermediario">HTML intermediário</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ratione autem corporis amet ea nulla voluptas? Ea fugit sed, assumenda expedita quasi dolor commodi exercitationem neque repellat enim temporibus magni!</p>   
+    <h2 class="avancado">HTML avançado</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ratione autem corporis amet ea nulla voluptas? Ea fugit sed, assumenda expedita quasi dolor commodi exercitationem neque repellat enim temporibus magni!</p>   
+
+    <h1 class="destaque">Aprendendo CSS</h1>
+    <h2 class="basico">CSS básico</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ratione autem corporis amet ea nulla voluptas? Ea fugit sed, assumenda expedita quasi dolor commodi exercitationem neque repellat enim temporibus magni!</p>   
+    <h2 class="intermediario">CSS intermediário</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ratione autem corporis amet ea nulla voluptas? Ea fugit sed, assumenda expedita quasi dolor commodi exercitationem neque repellat enim temporibus magni!</p>   
+    <h2 class="avancado destaque">CSS avançado</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident ratione autem corporis amet ea nulla voluptas? Ea fugit sed, assumenda expedita quasi dolor commodi exercitationem neque repellat enim temporibus magni!</p>    
+</body>
+</html>

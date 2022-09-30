@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex020 - Pseudo-classes e pseudo-elementos, Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        .especial {
+            background-color: rgba(255, 140, 140);
+        }
+
+        .especial::before {
+            content: '⇒ ';
+        }
+
+        .especial::after {
+            content: ' ⇐';
+        }
+    </style>
+</head>
+<!-- Ex020 - Pseudo-classes e pseudo-elementos, Links
+    links.html
+    text-decoration: decorações que podemos aplicar a elementos.
+
+    :visited - pseudo-classe que podemos aplicar se algo foi visitado.
+    :active - pseudo-classe que ativa quando clicamos no elemento.
+
+    :: - pseudoelemento - os pseudo-elementos podem ser aplicados a elementos a ids e a classes, pois mexem no conteúdo de determinado elemento.    
+
+    ::after - usado quando queremos indicar alguma coisa depois de um elemento
+    ::before - usado quando queremos indicar alguma coisa antes de um elemento
+    https://erikasarti.com/html/dingbats-simbolos-desenhos/
+-->
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/" target="_blank" class="especial">Canal do YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank" class="especial">Site do CursoemVideo</a></li>
+    </ul>
+</body>
+</html>

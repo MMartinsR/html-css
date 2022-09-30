@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex020 - Pseudo-classes</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: lightgray;
+            border: 1px solid black;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+
+        div:hover {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<!-- Ex020 - Pseudo-classes
+    shorthand border: largura estilo e cor
+    display: permite colocar os containers em disposições específicas
+        - block - esse elemento vira um bloco
+        - inline-block - um bloco em linha
+        - flex 
+        - inline-flex
+        - none (não mostrar) etc.
+
+    # - id
+    . - class
+    : - pseudo-classe, as pseudo-classes tem que estar relacionadas a um elemento ou a uma classe.
+    São relacionadas ao estado de um determinado elemento.
+    A pseudo-classe :hover significa que quando passamos o mouse for cima ela terá outro comportamento.
+
+    hover.html
+    No exemplo elemento > elemento, isto significa que o elemento a direita do > é um elemento que está dentro do da esquerda ou seja, o elemento da direita é FILHO do elemento da esquerda. div(pai) > p(filho) um dentro do outro.
+-->
+<body>    
+    <div id="d1">01</div>   
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

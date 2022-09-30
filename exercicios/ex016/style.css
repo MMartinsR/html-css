@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/*
+    width: largura do container.
+    padding: largura interior do objeto.
+    margin: largura exterior do objeto, auto ele centraliza independente do tamanho da tela.
+    border-radius: permite suavizar a borda do container.
+    box-shadow: permite aplicar sombra ao elemento
+        - param 1 sombra para lateral esq -10px dir 10px
+        - param 2 sombra para baixo cima -10px baixo 10px
+        - param 3 espalhamento px
+        - param 4 cor/transparência
+    
+    text-align: alinhamento do texto.
+    text-shadow: mesmo conceito do box-shadow.
+*/
+/* Configurações globais de CSS */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, #C2D5E0,  #536B82);
+}
+
+main {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(38, 49, 59, 0.747);
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+}
+
+h1 {
+    color: #536B82;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(39, 51, 61, 0.745);
+}
+
+h2 {
+    color: #6B7B8E;
+}
+
+p {
+    text-align: justify;
+}

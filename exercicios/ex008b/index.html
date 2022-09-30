@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex008b - Citações e Códigos</title>
+</head>
+<!-- ex008b - Citações e Códigos: outras formatações
+    code / code serve para envelopar um comando de código-fonte, deixando o comando em si mais claro, usando uma fonte monoespaçada. Porém ele não identa o seu código.
+
+    Para formatar esse código, usamos a tag pre e /pre
+
+    Para tirar espaços a mais, podemos usar SHIFT + TAB
+
+    q e /q é a tag que serve para fazer uma citação "citado"
+
+    blockquote e /blockquote serve para fazer uma citação em bloco, ela aparece de forma diferente do quote normal e é possivel colocar um parâmetro chamado cite onde pode colocar a referência para o livro do qual está sendo retirada aquela citação. Este parâmetro tem sentido para os mecanismos de busca, para dar direitos a quem criou o livro.
+
+    abbr e /abbr é a tag que permite colocar o significado de uma sigla
+-->
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código-fonte / Pré-formatação</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
+    <pre>
+        <code>
+    num = int(input('Digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é PAR')
+    else:
+        print(f'O número {num} é ÍMPAR')
+    print('Fim do Programa')
+        </code>
+    </pre>
+    
+    <h2>Citações simples</h2>
+    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido.</q></p>
+    <h2>Citações completas</h2>
+    <p>Segundo Elisabeth Robson, no seu livro Head First HTML and CSS:</p>
+    <blockquote cite="https://books.google.pt/books?id=BZIYQtV6yKsC&printsec=frontcover&dq=html&hl=en&sa=X&redir_esc=y#v=onepage&q=html&f=false">
+        With CSS, you're going to completely control the presentation of you pages, often without even changing your HTML.
+    </blockquote>
+
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+
+    <h2>Texto invertido</h2>
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+</body>
+</html>

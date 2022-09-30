@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex011 - Mídias em HTML5</title>
+</head>
+<!-- ex011 - Mídias em HTML5 (imagem e som)
+
+    Imagem dinâmica
+    A tag picture e /picture permite inserir mais do que uma imagem, e será responsável por definir qual imagem de fato estará aparecendo. (imagens dinâmicas)
+    Para definir qual imagem irá aparecer, usaremos a tag source media type dentro de picture, definindo o parâmetro media como max-width
+    Para definir mais do que um source, para inserir outra imagem deve ser acima do criado anteriormente.
+
+    Para baixar imagens e vídeos sem direito autoral:
+    https://www.pexels.com/pt-br/
+
+    Áudio
+    Caso precise de um áudio, pode baixar do youtube na biblioteca de audio que fica em seu youtube studio. Basta escolher alguma que tenha uso livre.
+
+    Usamos a tag audio e /audio para reproduzir áudios. No parâmetro src, colocamos o caminho do arquivo. Para que o audio seja reproduzido colocamos o parâmetro autoplay e o parâmetro controls.
+
+    Para que o seu site seja compativel com todos os navegadores, terá que ter vários formatos de arquivo de aúdio que sejam compativeis com cada um dos navegadores. Como mp3, wav, ogg etc.
+
+    O parâmetro preload serve para definir em que momento será carregado seu audio, auto (sempre que a página for carregada), metadata (inicialmente será carregado apenas alguns dados como, nome, tamanho, apenas quando clicar em play será de fato baixado o conteúdo) e none (nada será carregado do audio, apenas quando for clicado em play o download será feito).
+
+    Existe ainda outra maneira de inserir áudio ao seu navegador, com o audio mesmo, de forma diferente, através da tag source com parâmetro src.
+
+    Existem vários media types para o audio também, como audio/mpeg, audio/ogg etc, audio/wav etc.
+-->
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+
+    <audio src="midia/london-bridge-(vocal)-the-green-orbs.mp3" controls autoplay loop></audio>
+
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.<a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex021 - Modelo de Caixas</title>
+    <style>
+        h1 { /* box-level */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            /* Shorthand border: width style color */
+            border: 10px solid darkslategray;
+
+            /* Shorthand padding: top right bottom left ou sendo os valores iguais, informe 1 só */
+            /* padding: 10px 10px 10px 10px; */
+            /* padding: 10px; */
+            /* ou apenas 2: top right, o que iguala em 10 o bottom e em 20 o left */
+            padding: 10px 20px;
+
+            /* Shorthand margin: top right bottom left */
+            /* Podemos ainda usar o auto para centralizar na direita e esquerda */
+            margin: 20px auto 40px auto;
+
+            /* Shorthand outline: width style color */
+            outline: 5px dashed salmon;
+        }
+
+        a { /* inline-level */
+            border: 5px solid red;
+
+            padding: 5px;
+        }
+    </style>
+</head>
+<!-- Ex021 - Modelo de Caixas
+    O modelo de caixa é um paradigma que indica que tudo dentro da HTML é exibido dentro de caixas e uma caixa pode estar dentro da outra.
+
+    box do conteúdo do elemento
+    border
+    padding (espaço interno)
+    margin (espaço externo)
+    outline
+
+    Temos dois níveis de caixa
+    box-level - sempre se inicia em uma linha nova e ocupa o espaço total da tela em largura (width, 100% viewport), quebra linha.
+        - <div>
+        - <h1> a <h6>
+        - <p>
+        - <main>
+        - <header>
+        - <nav>
+        - <article>
+        - <aside>
+        - <footer>
+        - <footer>
+        - <video>
+
+    inline-level - se inicia na mesma linha, caso ela não tenha sido toda ocupada por outro elemento, cria a caixa apenas do tamanho do conteúdo, não quebra linha.
+        - <span>
+        - <a>
+        - <code>
+        - <small>
+        - <strong>
+        - <em>
+        - <sup>-<sub>
+        - <label>
+        - <button>
+        - <input>
+        - <select>
+
+    margin: auto centraliza horizontalmente o seu elemento.
+
+    Shorthand - propriedade de multiplos valores
+    /* Shorthand border: width style color */
+    /* Shorthand padding: top right bottom left ou sendo os valores iguais, informe 1 só */
+            /* padding: 10px 10px 10px 10px; */
+            /* padding: 10px; */
+            /* ou apenas 2: top right, o que iguala em 10 o bottom e em 20 o left */
+    
+    /* Shorthand margin: top right bottom left */
+        /* Podemos ainda usar o auto para centralizar na direita e esquerda */
+    /* Shorthand outline: width style color */
+
+    Podemos ainda transformar elementos que por padrão são box-level ou inline-level para inline-level e box-level respectivamente usando:
+    display: inline; em um elemento box-level e
+    display: block; em um elemento inline-level.
+    
+    Temos ainda o display: inline-block que mescla as caracteristicas dos dois.     
+-->
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona</p>
+</body>
+</html>

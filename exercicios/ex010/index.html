@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex010 - Links e Âncoras em HTML5</title>
+</head>
+<!-- ex010 - Links e Âncoras em HTML5
+    Link externo é usado para apontar para outro site.
+    Usamos a tag a e /a para fazer uma âncora a este outro site, por exemplo. Dentro da âncora temos o parâmetro href (referência hipertexto) onde podemos inserir o caminho do link externo.
+
+    !!É recomendado usar o parâmetro target com o valor _blank quando se utiliza links externos para que o site externo não sobreponha o seu site. O valor _blank irá abrir o site externo em outra aba.!!
+
+    O parâmetro rel (relativo a) com o valor external é usado para sinalizar que é um link externo.
+
+    Quando usamos um link interno, não precisamos colocar um caminho inteiro, apenas o nome do arquivo se estiver na mesma pasta ou o caminho da pasta até o arquivo se estiver em outra pasta.
+
+    Outros valores para rel são: next (próxima página) e prev (página anterior) e nofollow (quando não se tem certeza se o site do link é totalmente fidedigno ou não se é real)
+
+    Target _self obriga a abrir na própria página, é o comportamento padrão de redirecionamento
+
+    Para redirecionar para uma página que não está na mesma pasta, temos que colocar o nome da pasta e o nome do arquivo.
+
+    Para redirecionar para uma página que fica em uma pasta anterior a que se está no momento, devemos usar o ../ antes do nome da pasta/arquivo para que o html saiba que está VOLTANDO pastas.
+
+    Para fazer download de arquivos, usamos as âncoras e em seu parâmetro href colocamos o valor de onde está o arquivo (caminho). Mas para efetivamente baixar quando clicar na âncora, devemos colocar o parâmetro download e em seu valor, o nome do arquivo que deverá ser baixado. Além disso, devemos colocar o parametro type com o valor application/pdf
+
+    Para encontrar os tipos de media types:
+    https://www.iana.org/assignments/media-types/media-types.xhtml
+-->    
+<body>
+    <h1>Links e Âncoras em HTML5</h1>
+    <h2>Usando links externos</h2>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub</a></p>
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a></p>
+
+    <h2>Usando links internos</h2>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next" target="_self">segunda página</a></p>
+    <p>Você também pode acessar a nossa página de <a href="noticias/pag003.html" rel="next" target="_self">notícias</a></p>
+
+    <h2>Links para downloads</h2>
+    <ul>
+        <li><a href="livro/10 - Ligações em toda parte.pdf" download="10 - Ligações em toda parte.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/10 - Ligações em toda parte.rar" download="10 - Ligações em toda parte.rar" type="application/vnd.rar">Livro compactado em RAR</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex-16 - Representando Cores com CSS3</title>
+    <style>
+        * {
+            height: 100%;
+        }
+        body {
+            background-image: linear-gradient(to right, #7F3AB2 1%, #C02C81,
+            #E11038, #F86900, #F9C500 95%);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<!-- Ex-16 - Representando Cores com CSS3 pt2
+
+    - background-image: serve para fazer degrade de cores.
+        linear-gradient() - função interna do background-image que faz um degradê linear.
+        ::Onde precisamos colocar a direção do degradê (to right, to left, to top ou to bottom) ou em graus (90deg, 45deg, etc).
+        ::Em seguida as cores separadas por vírgula.
+        ::Podemos ainda depois de cada cor, colocar quanto em porcentagem da cor você deseja
+
+        radial-gradiete() - função interna do background-image que faz um degradê radial.
+        ::Onde em vez do ângulo, colocamos circle
+    - background-attachment: permite definir como o fundo estará, se fixo ou móvel
+
+    Podemos criar um seletor global, através do * {}, para fazer uma configuração global das CSSs
+    
+    - height: define a altura da área de conteúdo.
+-->
+<body>
+    <h1>Testando Gradiente</h1>
+</body>
+</html>
