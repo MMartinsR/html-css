@@ -16,7 +16,9 @@
 
 <a href="https://mmartinsr.github.io/html-css/exercicios/ex006/index.html">Exercício 006</a>
 
-<a href="https://mmartinsr.github.io/html-css/exercicios/ex007/index.html">Exercício 007</a>
+<a href="https://mmartinsr.github.io/html-css/exercicios/ex007/html4.html">Exercício 007-01</a>
+
+<a href="https://mmartinsr.github.io/html-css/exercicios/ex007/html5.html">Exercício 007-02</a>
 
 <a href="https://mmartinsr.github.io/html-css/exercicios/ex008/index.html">Exercício 008</a>
 
