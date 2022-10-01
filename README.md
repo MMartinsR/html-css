@@ -7,4 +7,6 @@
 <br>
 <a href="https://mmartinsr.github.io/html-css/desafios/d010/android.html">Desafio Android</a>
 
+<a href="https://mmartinsr.github.io/html-css/desafios/d012/index.html">Desafio Cordel</a>
+
 
