@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex022 - Site Teste</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: black;
+            background-image: url('imagens/wallpaper002.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        main {
+            background-color: white;
+            border: 1px solid darkblue;
+            border-radius: 15px;
+            width: 400px;
+            padding: 10px;
+            margin: auto;
+        }
+    </style>
+</head>
+<!-- Ex022 - Site Teste
+    Se trabalharmos com porcentagem de tamanho, a imagem tenderá a redimensionar para tentar caber direito na tela.
+    background-size: 100%; 100% em width
+    background-size: 100% 100%; 100% em width e height
+
+    Para que a imagem siga o tamanho da viewporte, precisamos configurar também a altura do body para 100vh
+
+    Mas também não é a melhor solução pois a tela tenderá a achatar e distorcer a imagem
+
+    A melhor forma de resolver isso é usando:
+    background-size: contain;
+        - contain: faz a imagem ser 100% exibida.
+        - cover: cobre a tela inteira, mesmo que tenha que picotar a imagem.
+-->
+<body>
+    <main>
+        <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime pariatur modi eligendi reiciendis fuga quo aliquam vero consequuntur adipisci sed! Voluptatum fuga nemo similique error nostrum nulla fugiat quisquam officiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, amet aliquid ad ea velit deserunt fugiat aperiam distinctio dolor eveniet cumque provident, voluptatem ipsum, optio reprehenderit ducimus non. Id. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam quasi nemo quisquam ipsa! Mollitia, illo ad delectus dolore quam repudiandae alias nostrum in doloribus quia, debitis architecto iure sint asperiores?</p>
+    </main>    
+</body>
+</html>
