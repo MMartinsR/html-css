@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex022 - Alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+
+            background-color: purple;
+            position: relative;
+            height: 96vh;
+            padding: 10px;
+            
+        }
+
+        #conteudo {
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<!-- Ex022 - Alinhamento vertical
+    O margin auto só serve para alinhar horizontalmente.
+
+    O container terá posicionamento relativo e o conteudo posicionamento absoluto, o que permite colocar no conteudo duas propriedades:
+        - left, medido em pixels ou %
+        -top, medido em pixels ou %.
+
+    transform : permite mexer em qualquer caixa aplicando uma função de transformação como:
+        - translate() permite mexer o componente, em pixels ou %
+-->
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>    
+</body>
+</html>

@@ -592,7 +592,7 @@ div.video > iframe {
 
     background-position: right bottom; - primeiro coluna, depois linha. Right (coluna) bottom (linha)
 
-    fundo06.html
+    fundo06.html - fundo fixo
     Se trabalharmos com porcentagem de tamanho, a imagem tenderá a redimensionar para tentar caber direito na tela.
     background-size: 100%; 100% em width
     background-size: 100% 100%; 100% em width e height
@@ -605,5 +605,23 @@ div.video > iframe {
     background-size: contain;
         - contain: faz a imagem ser 100% exibida.
         - cover: cobre a tela inteira, mesmo que tenha que picotar a imagem.
--->
+
+    background-attachment: ; Permite fixar o fundo. Existem dois valores possíveis:
+        - scroll: o fundo vai rolar junto com o conteudo (padrao)
+        - fixed: o fundo fica fixo, e apenas o conteudo rola.
+
+    background shorthand
+    background: color > image > position > repeat > [size] > attachment;
+
+    A shorthand funciona, tirando o size, por algum motivo este parâmetro buga o shorthand, então é necessário colocar separado.
+
+    fundo07.html - Alinhamento vertical
+    O margin auto só serve para alinhar horizontalmente.
+
+    O container terá posicionamento relativo e o conteudo posicionamento absoluto, o que permite colocar no conteudo duas propriedades:
+        - left, medido em pixels ou %
+        -top, medido em pixels ou %.
+
+    transform : permite mexer em qualquer caixa aplicando uma função de transformação como:
+        - translate() permite mexer o componente, em pixels ou %
 -->
