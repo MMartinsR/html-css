@@ -586,5 +586,24 @@ div.video > iframe {
         valores: - left top     center top      right top
                  - left center  center center   right center
                  - left bottom  center bottom   right bottom
-                 - 
+                 
+    fundo04.html
+    height: 100vh; view height, 100% da viewport (parte branca, corpo)
+
+    background-position: right bottom; - primeiro coluna, depois linha. Right (coluna) bottom (linha)
+
+    fundo06.html
+    Se trabalharmos com porcentagem de tamanho, a imagem tenderá a redimensionar para tentar caber direito na tela.
+    background-size: 100%; 100% em width
+    background-size: 100% 100%; 100% em width e height
+
+    Para que a imagem siga o tamanho da viewporte, precisamos configurar também a altura do body para 100vh
+
+    Mas também não é a melhor solução pois a tela tenderá a achatar e distorcer a imagem
+
+    A melhor forma de resolver isso é usando:
+    background-size: contain;
+        - contain: faz a imagem ser 100% exibida.
+        - cover: cobre a tela inteira, mesmo que tenha que picotar a imagem.
+-->
 -->

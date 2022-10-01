@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex022 - Site Teste</title>
+    <title>Ex022 - Site Teste - fundo fixo</title>
     <style>
         body {
             height: 100vh;
-            background-color: black;
+            /*background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center center;
-            background-repeat: no-repeat;
+            background-repeat: repeat-y;
+            background-size: cover;
+            background-attachment: fixed;*/
+
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
             background-size: cover;
         }
 
@@ -19,7 +23,7 @@
             background-color: white;
             border: 1px solid darkblue;
             border-radius: 15px;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
         }
@@ -38,10 +42,23 @@
     background-size: contain;
         - contain: faz a imagem ser 100% exibida.
         - cover: cobre a tela inteira, mesmo que tenha que picotar a imagem.
+
+    background-attachment: ; Permite fixar o fundo. Existem dois valores possíveis:
+        - scroll: o fundo vai rolar junto com o conteudo (padrao)
+        - fixed: o fundo fica fixo, e apenas o conteudo rola.
+
+    background shorthand
+    background: color > image > position > repeat > [size] > attachment;
+
+    A shorthand funciona, tirando o size, por algum motivo este parâmetro buga o shorthand, então é necessário colocar separado.
 -->
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime pariatur modi eligendi reiciendis fuga quo aliquam vero consequuntur adipisci sed! Voluptatum fuga nemo similique error nostrum nulla fugiat quisquam officiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, amet aliquid ad ea velit deserunt fugiat aperiam distinctio dolor eveniet cumque provident, voluptatem ipsum, optio reprehenderit ducimus non. Id. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam quasi nemo quisquam ipsa! Mollitia, illo ad delectus dolore quam repudiandae alias nostrum in doloribus quia, debitis architecto iure sint asperiores?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime pariatur modi eligendi reiciendis fuga quo aliquam vero consequuntur adipisci sed! Voluptatum fuga nemo similique error nostrum nulla fugiat quisquam officiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, amet aliquid ad ea velit deserunt fugiat aperiam distinctio dolor eveniet cumque provident, voluptatem ipsum, optio reprehenderit ducimus non. Id. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam quasi nemo quisquam ipsa! Mollitia, illo ad delectus dolore quam repudiandae alias nostrum in doloribus quia, debitis architecto iure sint asperiores?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime pariatur modi eligendi reiciendis fuga quo aliquam vero consequuntur adipisci sed! Voluptatum fuga nemo similique error nostrum nulla fugiat quisquam officiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, amet aliquid ad ea velit deserunt fugiat aperiam distinctio dolor eveniet cumque provident, voluptatem ipsum, optio reprehenderit ducimus non. Id. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam quasi nemo quisquam ipsa! Mollitia, illo ad delectus dolore quam repudiandae alias nostrum in doloribus quia, debitis architecto iure sint asperiores?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime pariatur modi eligendi reiciendis fuga quo aliquam vero consequuntur adipisci sed! Voluptatum fuga nemo similique error nostrum nulla fugiat quisquam officiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, amet aliquid ad ea velit deserunt fugiat aperiam distinctio dolor eveniet cumque provident, voluptatem ipsum, optio reprehenderit ducimus non. Id. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam quasi nemo quisquam ipsa! Mollitia, illo ad delectus dolore quam repudiandae alias nostrum in doloribus quia, debitis architecto iure sint asperiores?</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime pariatur modi eligendi reiciendis fuga quo aliquam vero consequuntur adipisci sed! Voluptatum fuga nemo similique error nostrum nulla fugiat quisquam officiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam unde, amet aliquid ad ea velit deserunt fugiat aperiam distinctio dolor eveniet cumque provident, voluptatem ipsum, optio reprehenderit ducimus non. Id. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam quasi nemo quisquam ipsa! Mollitia, illo ad delectus dolore quam repudiandae alias nostrum in doloribus quia, debitis architecto iure sint asperiores?</p>
     </main>    
 </body>
