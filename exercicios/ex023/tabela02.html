@@ -15,8 +15,16 @@
             border-collapse: collapse;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
 
@@ -35,21 +43,29 @@
     
     Hierarquia de tabelas (grandes)
     table
-        thead
+        caption - legenda da tabela
+        thead - cabeça da tabela
             tr, td, th
-        tbody
+        tbody - corpo da tabela
             tr, td, th
-        tfoot
+        tfoot - pé da tabela
             tr, td, th
+
+    Podemos ainda dizer de qual coluna é um título, através do parâmetro scope e o valor col no th. Dizemos que aquele título de coluna se refere a coluna que vem abaixo dele.
+
+    Podemos também referênciar o título da linha, com o parâmetro scrope e o valor row. Dizemos que aquele título de linha se refere a linha que vem ao lado dele.
+
+    Podemos definir uma largura para a coluna, pontualmente, usando o style inline.
 -->
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col" style="width: 50px;">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -191,7 +207,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="2">Total de habitantes</th>
+                <th colspan="2" scope="row">Total de habitantes</th>
                 <td class="num"><strong>210.174.125</strong></td>
             </tr>
         </tfoot>
