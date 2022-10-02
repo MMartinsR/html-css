@@ -13,6 +13,7 @@
         table {
             width: 500px;           
             border-collapse: collapse;
+            position: relative;
         }
 
         caption {
@@ -26,6 +27,12 @@
         thead, tfoot {
             background-color: #383838;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
         }
 
         tbody > tr:nth-child(odd) {
@@ -72,6 +79,13 @@
 
     Podemos aplicar ainda o valor odd or even (IMPAR OU PAR) dentro do seletor.
     Usando o modo do 2n, se colocamos 2n-1 = odd e 2n = even.
+
+    Cabeçalho fixo
+     - Precisamos colocar a tabela como position: relative;
+     - Acessamos th através do seletor thead > tr > th, e colocamos a posição dele como position: sticky; 
+     - Em seguida colocamos o parâmetro e valor top: 0; que faz o cabeçalho grudar no topo, mas ainda não basta, porque isso faz colar as palavras do cabeçalho e não o background. Para isso:
+     - Colocamos o mesmo background-color dentro do seletor.
+     - Para resolver a questão do pixel que falta e deixa uma falha em cima, mudamos o top: 0px para top: -1px.
 -->
 <body>
     <h1>Uso de tabelas grandes</h1>
@@ -228,5 +242,11 @@
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta porro laudantium repellat excepturi alias maiores ipsam rerum nulla minus officia qui minima, deleniti sed a iure architecto consectetur soluta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ab obcaecati aliquam esse molestiae! Error, quaerat eius voluptates facere, eaque temporibus quo ipsum quod minima, laborum harum expedita quasi beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae voluptate impedit, omnis at pariatur harum nihil asperiores odit, quisquam, architecto dolore dicta ullam aliquid commodi soluta mollitia numquam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum sit, delectus et consequatur ullam labore molestiae aut id quasi accusantium debitis corrupti ipsum vero corporis numquam excepturi consequuntur distinctio?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta porro laudantium repellat excepturi alias maiores ipsam rerum nulla minus officia qui minima, deleniti sed a iure architecto consectetur soluta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ab obcaecati aliquam esse molestiae! Error, quaerat eius voluptates facere, eaque temporibus quo ipsum quod minima, laborum harum expedita quasi beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae voluptate impedit, omnis at pariatur harum nihil asperiores odit, quisquam, architecto dolore dicta ullam aliquid commodi soluta mollitia numquam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum sit, delectus et consequatur ullam labore molestiae aut id quasi accusantium debitis corrupti ipsum vero corporis numquam excepturi consequuntur distinctio?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta porro laudantium repellat excepturi alias maiores ipsam rerum nulla minus officia qui minima, deleniti sed a iure architecto consectetur soluta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ab obcaecati aliquam esse molestiae! Error, quaerat eius voluptates facere, eaque temporibus quo ipsum quod minima, laborum harum expedita quasi beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae voluptate impedit, omnis at pariatur harum nihil asperiores odit, quisquam, architecto dolore dicta ullam aliquid commodi soluta mollitia numquam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum sit, delectus et consequatur ullam labore molestiae aut id quasi accusantium debitis corrupti ipsum vero corporis numquam excepturi consequuntur distinctio?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta porro laudantium repellat excepturi alias maiores ipsam rerum nulla minus officia qui minima, deleniti sed a iure architecto consectetur soluta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ab obcaecati aliquam esse molestiae! Error, quaerat eius voluptates facere, eaque temporibus quo ipsum quod minima, laborum harum expedita quasi beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae voluptate impedit, omnis at pariatur harum nihil asperiores odit, quisquam, architecto dolore dicta ullam aliquid commodi soluta mollitia numquam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum sit, delectus et consequatur ullam labore molestiae aut id quasi accusantium debitis corrupti ipsum vero corporis numquam excepturi consequuntur distinctio?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta porro laudantium repellat excepturi alias maiores ipsam rerum nulla minus officia qui minima, deleniti sed a iure architecto consectetur soluta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ab obcaecati aliquam esse molestiae! Error, quaerat eius voluptates facere, eaque temporibus quo ipsum quod minima, laborum harum expedita quasi beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae voluptate impedit, omnis at pariatur harum nihil asperiores odit, quisquam, architecto dolore dicta ullam aliquid commodi soluta mollitia numquam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum sit, delectus et consequatur ullam labore molestiae aut id quasi accusantium debitis corrupti ipsum vero corporis numquam excepturi consequuntur distinctio?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta porro laudantium repellat excepturi alias maiores ipsam rerum nulla minus officia qui minima, deleniti sed a iure architecto consectetur soluta! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ab obcaecati aliquam esse molestiae! Error, quaerat eius voluptates facere, eaque temporibus quo ipsum quod minima, laborum harum expedita quasi beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis vitae voluptate impedit, omnis at pariatur harum nihil asperiores odit, quisquam, architecto dolore dicta ullam aliquid commodi soluta mollitia numquam perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum sit, delectus et consequatur ullam labore molestiae aut id quasi accusantium debitis corrupti ipsum vero corporis numquam excepturi consequuntur distinctio?</p>
 </body>
 </html>

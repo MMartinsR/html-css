@@ -669,4 +669,14 @@ div.video > iframe {
 
     Efeito Zebrado
     Para fazer o efeito, usamos a pseudo-classe nth-child() com o valor 2n que permite configurar que apenas a cada 2 celulas será aplicado o estilo descrito no seletor.
+
+    Podemos aplicar ainda o valor odd or even (IMPAR OU PAR) dentro do seletor.
+    Usando o modo do 2n, se colocamos 2n-1 = odd e 2n = even.
+
+    Cabeçalho fixo
+     - Precisamos colocar a tabela como position: relative;
+     - Acessamos th através do seletor thead > tr > th, e colocamos a posição dele como position: sticky; 
+     - Em seguida colocamos o parâmetro e valor top: 0; que faz o cabeçalho grudar no topo, mas ainda não basta, porque isso faz colar as palavras do cabeçalho e não o background. Para isso:
+     - Colocamos o mesmo background-color dentro do seletor.
+     - Para resolver a questão do pixel que falta e deixa uma falha em cima, mudamos o top: 0px para top: -1px.
 -->
