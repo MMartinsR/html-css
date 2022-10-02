@@ -28,6 +28,16 @@
             color: white;
         }
 
+        tbody > tr:nth-child(odd) {
+            background-color: white;
+            font-weight: bold;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightblue;
+            text-decoration: underline;
+        }
+
         td, th {
             border: 1px solid black;
             padding: 10px;
@@ -56,6 +66,12 @@
     Podemos também referênciar o título da linha, com o parâmetro scrope e o valor row. Dizemos que aquele título de linha se refere a linha que vem ao lado dele.
 
     Podemos definir uma largura para a coluna, pontualmente, usando o style inline.
+
+    Efeito Zebrado
+    Para fazer o efeito, usamos a pseudo-classe nth-child() com o valor 2n que permite configurar que apenas a cada 2 celulas será aplicado o estilo descrito no seletor.
+
+    Podemos aplicar ainda o valor odd or even (IMPAR OU PAR) dentro do seletor.
+    Usando o modo do 2n, se colocamos 2n-1 = odd e 2n = even.
 -->
 <body>
     <h1>Uso de tabelas grandes</h1>
