@@ -711,3 +711,26 @@ div.video > iframe {
     Quando usamos expansões, o escopo deverá englobar todas as colunas ou linhas daquele th, logo devemos usar o colgroup ou rowgroup para definir o escopo.
 -->
 
+<!-- Ex024 - iFrame - inline-frame
+    Permite carregar uma instancia de um conteudo dentro do seu site, um site, um video, que vai ficar carregado dentro do site, e que é um elemento inline.
+
+    Alguns sites como o Google, não permitem a exibição dentro de iFrames e para isso eles tem um bloqueio. O motivo é que existem falhas de segurança em utilizar o iFrame.
+
+    A parte entre as tags do iFrame servem como o alt das imagens e videos, ou seja, apenas aparecem caso o navegador não possa exibir o conteudo do iFrame. Logo, podemos colocar uma mensagem, ou...
+
+    Podemos usar esse espaço para criar um link que caso o iFrame não seja suportado pelo navegador, poderá acessar o site diretamente pela âncora.
+
+    padrão tamanho iFrame: 300x150 wxh
+
+    As CSS são soberanas ao uso dos parâmetros diretamente nas tags no caso do iFrame. E na maioria dos outros casos também XD
+
+    Existe no iFrame um parâmetro chamado scolling com os valores
+        - auto: apresenta o conteudo com um scroll
+        - yes: mesmo que o conteudo caiba todo dentro do iframe ainda aparece um scroll
+        - no: não deveria deixar rolar. 
+
+    frameborder: 0 - sem borda
+    frameborder: 1 - com borda.
+
+    Podemos aplicar borda ao iFrame usando CSS
+-->
