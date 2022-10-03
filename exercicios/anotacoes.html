@@ -736,6 +736,20 @@ div.video > iframe {
 
     o Iframe permite carregar páginas internas do seu site, um conteúdo seu extra dentro dele.
 
-    Uso de iFrames
-    Para carregar uma outra página sua dentro de um iframe, sendo que estará sendo exibido a partir de um link na mesma página, damos um atributo name ao iFrame e dentro do target do link, colocamos esse valor do atributo name.
+    iframe03 - Uso de iFrames
+    Para carregar uma outra página sua dentro de um iframe, sendo que estará sendo exibido a partir de um link na mesma página, damos um atributo name ao iFrame e dentro do target do link, colocamos esse valor do parâmetro name.
+
+    Podemos aplicar em vez do src no iFrame, o srcdoc, pois conseguimos inserir html dentro desse parâmetro.
+
+    Quando temos códigos como esse que está dentro de aspas duplas, temos que colocar aspas simples caso precisemos de aspas para algum parâmetro.
+
+    iframe04 - Formulário e iFrames
+    Para bloquear possíveis ações maliciosas dentro do iFrame, iremos usar:
+        -> sandbox="sandbox" - bloqueia todo e qualquer acesso que outros sites possam tentar fazer ao seu site através do iFrame
+        -> para permitir algumas ações devemos escolher das seguintes opções:
+            -> sandbox="allow-same-origin" - permitir conteúdo de mesma origem.
+            -> sandbox="allow-same-origin allow-forms" - permitir conteudo e permitir formularios.
+            -> sandbox="allow-same-origin allow-forms allow-scripts" - permitir conteudo e permitir formularios e permitir scripts.
+
+        -> referrerpolicy="no-referrer-when-downgrade" - politica de referência, esse é o valor padrão, para limitar o que irá ser carregado dentro do iFrame, use o valor referrerpolicy="no-referrer" este valor irá configurar para que o iframe não colete nenhum tipo de dado de usuario do seu site.
 -->

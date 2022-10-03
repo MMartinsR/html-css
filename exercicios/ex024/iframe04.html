@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex024 - iFrames</title>
+</head>
+<!-- Ex024 - Formulário e iFrames
+    Para bloquear possíveis ações maliciosas dentro do iFrame, iremos usar:
+        -> sandbox="sandbox" - bloqueia todo e qualquer acesso que outros sites possam tentar fazer ao seu site através do iFrame
+        -> para permitir algumas ações devemos escolher das seguintes opções:
+            -> sandbox="allow-same-origin" - permitir conteúdo de mesma origem.
+            -> sandbox="allow-same-origin allow-forms" - permitir conteudo e permitir formularios.
+            -> sandbox="allow-same-origin allow-forms allow-scripts" - permitir conteudo e permitir formularios e permitir scripts.
+
+        -> referrerpolicy="no-referrer-when-downgrade" - politica de referência, esse é o valor padrão, para limitar o que irá ser carregado dentro do iFrame, use o valor referrerpolicy="no-referrer" este valor irá configurar para que o iframe não colete nenhum tipo de dado de usuario do seu site.
+-->
+<body>
+   <h1>Meu site principal</h1> 
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi quo culpa nostrum possimus facilis id minima eius quaerat. Consequatur magnam eos sapiente aperiam dolorum ut error quas mollitia nostrum voluptas.</p>
+
+    <iframe src="paginas-extras/pag04.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        Seu navegador não é compatível com isso.
+    </iframe>
+
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate sapiente rerum placeat! Asperiores voluptates illo ratione, voluptatum pariatur reiciendis sit sint aut sapiente, perspiciatis libero, illum cum explicabo consectetur quae!</p>
+</body>
+</html>
