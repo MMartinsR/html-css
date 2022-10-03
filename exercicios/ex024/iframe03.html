@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex024 - Uso de iFrames</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            display: block;
+            width: 90vw;
+            height: 400px;
+            margin: auto;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<!-- Ex024 - Uso de iFrames
+    Para carregar uma outra página sua dentro de um iframe, sendo que estará sendo exibido a partir de um link na mesma página, damos um atributo name ao iFrame e dentro do target do link, colocamos esse valor do atributo name.
+-->
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, eius? Dolores, soluta similique magnam illo obcaecati enim labore ipsa accusamus voluptatibus cupiditate in non unde aspernatur consequatur quos quasi provident.</p>
+
+    <ul>
+        <li><a href="paginas-extras/pag01.html" target="frame">Primeira Página</a></li>
+        <li><a href="paginas-extras/pag02.html" target="frame">Segunda Página</a></li>
+        <li><a href="paginas-extras/pag03.html" target="frame">Terceira Página</a></li>
+    </ul>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum omnis quaerat alias quos facilis, perspiciatis, similique accusantium eligendi natus nisi suscipit, accusamus officiis esse itaque corporis impedit velit reiciendis ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui veritatis corporis provident libero animi aut officiis praesentium. Harum amet dicta eos accusantium fugiat doloribus, illo quam earum. Molestias, quo quia? </p>
+
+    <iframe id="tela" name="frame" src="">
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat omnis at architecto, et quaerat labore quibusdam adipisci hic, voluptates eveniet cumque quos alias ipsam iure dolorum. Adipisci neque voluptas natus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente aliquid eveniet nesciunt a sequi, facere amet modi, temporibus soluta repudiandae facilis, quasi voluptatem ipsa quos tenetur qui veritatis aliquam? Officiis!</p>
+</body>
+</html>
