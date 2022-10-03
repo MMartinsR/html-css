@@ -690,6 +690,19 @@ div.video > iframe {
     Para cada coluna com scope=col podemos colocar uma tag col dentro de colgroup e através dessas tags col, podemos configurar as colunas, por exemplo dando uma classe a elas ou um id
 
     Podemos linkar duas ou mais colunas usando o parâmetro span no col.
+
+    Tabelas responsivas
+    Para melhorar a responsividade de uma tabela em telas pequenas:
+     - primeiro envelopamos a tabela INTEIRA em uma div;
+     - segundo colocamos para ela um id, que no caso foi container;
+     - no estilo de div#container colocamos:
+        - overflow-x (rolagem horizontal)
+            Existem:
+                - overflow (x e y), overflow-y (rolagem vertical)
+            Com os valores:
+                - scroll: cria um scroll na tela, precisando a tabela ou não.
+                - hidden: padrão, gera um scroll vertical
+                - auto: cria um scroll de rolagem DA TABELA
 -->
 
 <!-- Desafio 13 - Tabela de Pessoas e seus filmes favoritos
