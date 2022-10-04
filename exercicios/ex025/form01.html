@@ -24,10 +24,12 @@
     Para enviar os dados a linguagem de programação que irá processá-los, basta usar o parâmetro action do form e colocar entre aspas o arquivo.
 
     Métodos de envio de dados
+    GET - padrão, envia os dados pela url, usado quando não forem enviados dados sensiveis, só pode ser enviado até 3000 bytes.
+    POST - esconde os dados da url.
 -->
 <body>
     <h1>Formulário</h1>
-    <form action="cadastro.php" autocomplete="off">
+    <form action="cadastro.php" method="POST">
         <p><label for="inome">Nome: </label>
             <input type="text" name="nome" id="inome"></p>        
         <p><label for="isobrenome">Sobrenome: </label>
