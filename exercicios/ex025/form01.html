@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex025 - Formulários em HTML5</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<!-- Ex025 - Formulários em HTML5
+    input e /input usado para criar as caixas de texto, existem vários tipos
+   
+    Para relacionar um elemento de input a sua label, usamos o id do input e o for da label
+    
+    O parâmetro name e id é essencial para identificar os elementos.
+
+    Para desligar o auto-complete basta: 
+        autocomplete="off"
+    
+    Para enviar os dados a linguagem de programação que irá processá-los, basta usar o parâmetro action do form e colocar entre aspas o arquivo.
+
+    Métodos de envio de dados
+-->
+<body>
+    <h1>Formulário</h1>
+    <form action="cadastro.php" autocomplete="off">
+        <p><label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome"></p>        
+        <p><label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>        
+    </form>
+</body>
+</html>
