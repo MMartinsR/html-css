@@ -766,56 +766,74 @@ div.video > iframe {
 -->
 
 <!-- Ex025 - Formulários em HTML5
-    input e /input usado para criar as caixas de texto, existem vários tipos
+    -> input e /input usado para criar as caixas de texto, existem vários tipos
    
-    Para relacionar um elemento de input a sua label, usamos o id do input e o for da label
+    -> Para relacionar um elemento de input a sua label, usamos o id do input e o for da label
     
-    O parâmetro name e id é essencial para identificar os elementos.
+    -> O parâmetro name e id é essencial para identificar os elementos.
 
-    Para desligar o auto-complete basta: 
-        autocomplete="off"
+    -> Para desligar o auto-complete basta: 
+        -> autocomplete="off"
     
-    Para enviar os dados a linguagem de programação que irá processá-los, basta usar o parâmetro action do form e colocar entre aspas o arquivo.
+    -> Para enviar os dados a linguagem de programação que irá processá-los, basta usar o parâmetro action do form e colocar entre aspas o arquivo.
 
     Métodos de envio de dados
-    GET - padrão, envia os dados pela url, usado quando não forem enviados dados sensiveis, só pode ser enviado até 3000 bytes.
-    POST - esconde os dados da url.
+    -> GET - padrão, envia os dados pela url, usado quando não forem enviados dados sensiveis, só pode ser enviado até 3000 bytes.
+    -> POST - esconde os dados da url.
 
     form02.html
-    Para criar campos obrigatórios, usamos dentro da tag input:  
-        - required
-    Para criar campos que tenham um tamanho minimo ou máximo que deva ser digitado:
-        - min-length : e um valor
-        - max-length : e um valor
-    Para aumentar o tamanho da caixa de texto:
-        - size : e um valor
-    Podemos colocar dicas dentro das caixas de texto:
-        - placeholder: "e uma mensagem"
-    Quando colocamos o autocomplete, dentro do input, temos mais opções de configuração, existem muitas mas por exemplo:
-        - autocomplete="username" -> conterá nomes de usuário.
-        - autocomplete="new-password" -> para novos cadastros ou alterações de senha.
-        - autocomplete="current-password" -> para senhas atuais.
+    -> Para criar campos obrigatórios, usamos dentro da tag input:  
+        -> required
+    -> Para criar campos que tenham um tamanho minimo ou máximo que deva ser digitado:
+        -> min-length : e um valor
+        -> max-length : e um valor
+    -> Para aumentar o tamanho da caixa de texto:
+        -> size : e um valor
+    -> Podemos colocar dicas dentro das caixas de texto:
+        -> placeholder: "e uma mensagem"
+    -> Quando colocamos o autocomplete, dentro do input, temos mais opções de configuração, existem muitas mas por exemplo:
+        -> autocomplete="username" -> conterá nomes de usuário.
+        -> autocomplete="new-password" -> para novos cadastros ou alterações de senha.
+        -> autocomplete="current-password" -> para senhas atuais.
 
     form03.html
-    Para limitar os valores que podem ir dentro de uma caixa de texto numérica
-        - min : valor minimo
-        - max : valor máximo
-    Para podermos definir que um valor pode ter números quebrados num input, usamos o parâmetro (de quanto e quanto ele vai mudar):
-        - step : 0.5, ou 0.1 ou 0.2...
-    O input month serve para selecionar mês e ano em um período.
-    Existe forma de fazer um valor inicial ou padrão para as caixas de texto de number e month, por exemplo:
-        - value: um valor do tipo do campo.
+    -> Para limitar os valores que podem ir dentro de uma caixa de texto numérica
+        -> min : valor minimo
+        -> max : valor máximo
+    -> Para podermos definir que um valor pode ter números quebrados num input, usamos o parâmetro (de quanto e quanto ele vai mudar):
+        -> step : 0.5, ou 0.1 ou 0.2...
+    -> O input month serve para selecionar mês e ano em um período.
+    -> Existe forma de fazer um valor inicial ou padrão para as caixas de texto de number e month, por exemplo:
+        -> value: um valor do tipo do campo.
 
     form04.html
-    Usando o parâmetro pattern conseguimos inserir regex no nosso html:
+    -> Usando o parâmetro pattern conseguimos inserir regex no nosso html:
         -> Ex: pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
-    Podemos criar um agrupamento de campos através da tag:
+    -> Podemos criar um agrupamento de campos através da tag:
         -> fieldset
-    Podemos ainda colocar uma tag legend dentro do fieldset, como título agrupado
+    -> Podemos ainda colocar uma tag legend dentro do fieldset, como título agrupado
         -> legend
 
     form05.html
-    
+    -> No caso dos checkbox e radio, o input fica ANTES do valor dele
+
+    Radio
+    -> Para poder funcionar o radio corretamente, precisamos agrupa-lo usando o atributo name igual, logo para que seja diferenciado como ou marca um ou outro, eles devem ter o mesmo NAME
+    -> Para que apareça um dos botões de radio já marcado, colocamos dentro do input do que queremos o parâmetro checked neste apenas um pode estar marcado
+    -> Para enviar o valor correto do item marcado, devemos aplicar um parâmetro Value ao radio com o valor que queremos enviar.
+
+    Checkbox
+    -> No checkbox podemos colocar checked em quantos quisermos.
+
+    form06.html
+    -> input:color - para predefinir a cor que vai aparecer como padrão basta aplicar um parametro value.
+        -> Ex: value: "#ffffff"
+    -> input:range - o nível padrão é de 0 a 100 e começa no 50, mas podemos configurar isso:
+        -> Ex: min="1" max="5"
+    -> Para que comece em um nível diferente do meio (posição inicial):
+        -> Ex: value="2"
+    -> input: file - permite ao usuário escolher um arquivo de imagem para exibir.
+        -> Para utilizar esse controle de envio de arquivo, devemos utilizar o método POST, para que o navegador possa efetivamente enviar o arquivo no cabeçalho da requisição.
 -->
 
 
