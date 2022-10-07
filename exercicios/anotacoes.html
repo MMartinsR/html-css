@@ -712,39 +712,39 @@ div.video > iframe {
 -->
 
 <!-- Ex024 - iFrame - inline-frame
-    Permite carregar uma instancia de um conteudo dentro do seu site, um site, um video, que vai ficar carregado dentro do site, e que é um elemento inline.
+    -> Permite carregar uma instancia de um conteudo dentro do seu site, um site, um video, que vai ficar carregado dentro do site, e que é um elemento inline.
 
-    Alguns sites como o Google, não permitem a exibição dentro de iFrames e para isso eles tem um bloqueio. O motivo é que existem falhas de segurança em utilizar o iFrame.
+    -> Alguns sites como o Google, não permitem a exibição dentro de iFrames e para isso eles tem um bloqueio. O motivo é que existem falhas de segurança em utilizar o iFrame.
 
-    A parte entre as tags do iFrame servem como o alt das imagens e videos, ou seja, apenas aparecem caso o navegador não possa exibir o conteudo do iFrame. Logo, podemos colocar uma mensagem, ou...
+    -> A parte entre as tags do iFrame servem como o alt das imagens e videos, ou seja, apenas aparecem caso o navegador não possa exibir o conteudo do iFrame. Logo, podemos colocar uma mensagem, ou...
 
-    Podemos usar esse espaço para criar um link que caso o iFrame não seja suportado pelo navegador, poderá acessar o site diretamente pela âncora.
+    -> Podemos usar esse espaço para criar um link que caso o iFrame não seja suportado pelo navegador, poderá acessar o site diretamente pela âncora.
 
-    padrão tamanho iFrame: 300x150 wxh
+    -> padrão tamanho iFrame: 300x150 wxh
 
-    As CSS são soberanas ao uso dos parâmetros diretamente nas tags no caso do iFrame. E na maioria dos outros casos também XD
+    -> As CSS são soberanas ao uso dos parâmetros diretamente nas tags no caso do iFrame. E na maioria dos outros casos também XD
 
-    Existe no iFrame um parâmetro chamado scolling com os valores
-        - auto: apresenta o conteudo com um scroll
-        - yes: mesmo que o conteudo caiba todo dentro do iframe ainda aparece um scroll
-        - no: não deveria deixar rolar. 
+    -> Existe no iFrame um parâmetro chamado scolling com os valores
+        -> auto: apresenta o conteudo com um scroll
+        -> yes: mesmo que o conteudo caiba todo dentro do iframe ainda aparece um scroll
+        -> no: não deveria deixar rolar. 
 
     frameborder: 0 - sem borda
     frameborder: 1 - com borda.
 
-    Podemos aplicar borda ao iFrame usando CSS
+    -> Podemos aplicar borda ao iFrame usando CSS
 
-    o Iframe permite carregar páginas internas do seu site, um conteúdo seu extra dentro dele.
+    -> o Iframe permite carregar páginas internas do seu site, um conteúdo seu extra dentro dele.
 
     iframe03 - Uso de iFrames
-    Para carregar uma outra página sua dentro de um iframe, sendo que estará sendo exibido a partir de um link na mesma página, damos um atributo name ao iFrame e dentro do target do link, colocamos esse valor do parâmetro name.
+    -> Para carregar uma outra página sua dentro de um iframe, sendo que estará sendo exibido a partir de um link na mesma página, damos um atributo name ao iFrame e dentro do target do link, colocamos esse valor do parâmetro name.
 
-    Podemos aplicar em vez do src no iFrame, o srcdoc, pois conseguimos inserir html dentro desse parâmetro.
+    -> Podemos aplicar em vez do src no iFrame, o srcdoc, pois conseguimos inserir html dentro desse parâmetro.
 
-    Quando temos códigos como esse que está dentro de aspas duplas, temos que colocar aspas simples caso precisemos de aspas para algum parâmetro.
+    -> Quando temos códigos como esse que está dentro de aspas duplas, temos que colocar aspas simples caso precisemos de aspas para algum parâmetro.
 
     iframe04 - Formulário e iFrames
-    Para bloquear possíveis ações maliciosas dentro do iFrame, iremos usar:
+    -> Para bloquear possíveis ações maliciosas dentro do iFrame, iremos usar:
         -> sandbox="sandbox" - bloqueia todo e qualquer acesso que outros sites possam tentar fazer ao seu site através do iFrame
         -> para permitir algumas ações devemos escolher das seguintes opções:
             -> sandbox="allow-same-origin" - permitir conteúdo de mesma origem.
@@ -755,8 +755,8 @@ div.video > iframe {
 -->
 
 <!-- Desafio 14 - Redes Sociais
-    box-sizing: border-box; - permite que a borda faça parte da caixa.
-    transition: transform 0.3s, border .2s;
+    -> box-sizing: border-box; - permite que a borda faça parte da caixa.
+    -> transition: transform 0.3s, border .2s;
 
     ::-webkit-scrollbar {
             width: 0px;
@@ -834,6 +834,41 @@ div.video > iframe {
         -> Ex: value="2"
     -> input: file - permite ao usuário escolher um arquivo de imagem para exibir.
         -> Para utilizar esse controle de envio de arquivo, devemos utilizar o método POST, para que o navegador possa efetivamente enviar o arquivo no cabeçalho da requisição.
+
+    form07.html
+    -> O select, consiste em uma lista pré-definida de valores para ser selecionados.
+        -> select
+            option /option
+        /select
+    -> Podemos ainda, agrupar options:
+        -> optgroup
+            option /option
+            option /option
+        /optgroup
+    -> E ainda informar um label nesse optgroup que será o título do grupo e não é selecionavel.
+    -> Para escolher o estado que virá como padrão:
+        -> Ponha um parâmetro selected no option
+    
+    -> Podemos ainda criar um datalist:
+        -> Dentro da datalist teremos uma lista de OPTION com os valores que queremos dar as opções e para que quando clicarmos no campo na tela tenhamos a lista, devemos primeiro:
+        -> Dar um id a datalist;
+        -> Na caixa de texto criada, damos a ela o atributo list com o valor do id da datalist.
+        -> Assim, quando clicarmos na caixa de texto, ela exibirá os dados da datalist, value e nome do dado, caso não queiramos mostrar o value, basta tirar esse parâmetro na declaração do option.
+        -> O datalist engloba as opções que o desenvolvedor colocou inicialmente, mas também salva as que o usuário colocar, logo a lista se atualiza, mas isso é local, apenas o usuário que inseriu aquele exemplo vai poder vê-lo, pois isso não está salvo no código.
+
+    -> Temos a textarea que é usada para criar um campo de mensagens de várias linhas:
+        -> O ideal é que usemos POST quando usamos textarea por causa da quantidade de dados que podem ser enviados (o GET possui limitação de 3000 bytes)
+        -> Podemos colocar um placeholder:
+            -> <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua       mensagem aqui..."></textarea>
+        -> Ou entre as tags podemos escrever alguma coisa também:
+            -> <textarea name="msg" id="imsg" cols="30" rows="10">Mensagem!!</textarea>
+
+    form08.html
+    -> JavaScript
+        -> oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"
+
+    -> Output
+        -> A tag output serve para mostrar dados na tela, não envia nada.
 -->
 
 
