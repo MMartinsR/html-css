@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex025 - Formulários em HTML5</title>
+</head>
+<!-- Ex025 - Formulários em HTML5
+    -> O select, consiste em uma lista pré-definida de valores para ser selecionados.
+        -> select
+            option /option
+        /select
+    -> Podemos ainda, agrupar options:
+        -> optgroup
+            option /option
+            option /option
+        /optgroup
+    -> E ainda informar um label nesse optgroup que será o título do grupo e não é selecionavel.
+    -> Para escolher o estado que virá como padrão:
+        -> Ponha um parâmetro selected no option
+    
+    -> Podemos ainda criar um datalist:
+        -> Dentro da datalist teremos uma lista de OPTION com os valores que queremos dar as opções e para que quando clicarmos no campo na tela tenhamos a lista, devemos primeiro:
+        -> Dar um id a datalist;
+        -> Na caixa de texto criada, damos a ela o atributo list com o valor do id da datalist.
+        -> Assim, quando clicarmos na caixa de texto, ela exibirá os dados da datalist, value e nome do dado, caso não queiramos mostrar o value, basta tirar esse parâmetro na declaração do option.
+        -> O datalist engloba as opções que o desenvolvedor colocou inicialmente, mas também salva as que o usuário colocar, logo a lista se atualiza, mas isso é local, apenas o usuário que inseriu aquele exemplo vai poder vê-lo, pois isso não está salvo no código.
+
+    -> Temos a textarea que é usada para criar um campo de mensagens de várias linhas:
+        -> O ideal é que usemos POST quando usamos textarea por causa da quantidade de dados que podem ser enviados (o GET possui limitação de 3000 bytes)
+        -> Podemos colocar um placeholder:
+            -> <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua       mensagem aqui..."></textarea>
+        -> Ou entre as tags podemos escrever alguma coisa também:
+            -> <textarea name="msg" id="imsg" cols="30" rows="10">Mensagem!!</textarea>
+-->
+<body>
+    <h1>Exemplo de Fomulário</h1>
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <p>
+            <label for="iest">Estado: </label>
+            <select name="estado" id="iest">
+                <option value="" selected>--- Selecione ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option>Administrador</option>
+                <option>Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Mensagem: </label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua mensagem aqui...">Mensagem!!</textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form> 
+</body>
+</html>
