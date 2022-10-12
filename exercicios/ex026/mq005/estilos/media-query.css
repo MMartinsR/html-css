@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* Typical Device breakpoints 
+
+    Pequenas Telas -> até 600px -> como fizemos mobile first, já temos configs para essa resolução
+    Celular -> de 600px até 768px -> como fizemos mobile first, já temos configs para essa resolução
+    Tablet -> de 768px até 992px
+    Desktop -> de 992px até 1200px
+    Grandes telas -> acima de 1200px
+*/
+
+@media screen and (min-width: 768px){
+    span#burguer {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block;
+    }
+
+    menu > ul > li > a {
+        border-top: 2px solid rgb(87, 87, 87);
+    }
+
+    main {
+        width: 768px;
+    }
+}
