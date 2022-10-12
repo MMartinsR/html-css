@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex026 - Media Query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">    
+</head>
+<!-- Ex026 - Media Query
+    Menu responsivo usando media query
+
+    Site de Icones
+    https://fonts.google.com/icons?selected=Material+Icons
+    https://developers.google.com/fonts/docs/material_icons#icon_font_for_the_web
+
+    cursor:pointer, permite configurar que o cursor virará uma mão apontando.
+
+-->
+<body>
+    <header>
+        <h1>Site com menu responsivo</h1>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="menuItens">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Imagens</a></li>
+                <li><a href="#">Vídeos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando media queries na criação de menu responsivo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perspiciatis hic voluptatibus, pariatur quasi quia labore quis. Inventore veniam labore hic magnam. Illum nemo quibusdam exercitationem quisquam? Corporis, provident illum? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos ut temporibus totam ipsa voluptate illo minima quibusdam deserunt ea non? Quaerat dolores aperiam accusamus, architecto quis voluptate distinctio perspiciatis totam!</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum dolore temporibus veritatis molestias libero aliquam soluta animi ea dolores? Neque, officiis? Suscipit, unde nesciunt? Iste ipsam id quia sit laborum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident a rem incidunt, nemo numquam maxime aliquid iste minima, labore magni iure aliquam dolores quo ipsum rerum, inventore unde voluptatibus laborum!</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ex nisi nostrum non suscipit soluta ea ad. Doloremque illum harum provident, doloribus repellendus maxime sapiente! Mollitia quo ab est asperiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sed similique incidunt quae quasi, cumque ex voluptas aut adipisci recusandae quaerat vitae, cum commodi. Fugiat ad impedit recusandae labore adipisci.</p>
+        </article>
+    </main>
+    <script>
+        function clickMenu() {
+            if (menuItens.style.display == 'block') {
+                menuItens.style.display = 'none';
+            } else {
+                menuItens.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
